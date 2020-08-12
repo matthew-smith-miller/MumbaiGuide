@@ -29,8 +29,14 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="TabLayoutFill">
+        <item name="tabGravity">fill</item>
+        <item name="tabMaxWidth">0dp</item>
+    </style>
+
     <dimen name="ListImage">72dp</dimen>
     <dimen name="ListStar">36dp</dimen>
+    <dimen name="ListTextRightMargin">48dp</dimen>
     <dimen name="CardHorizontalMargin">36dp</dimen>
     <dimen name="CardVerticalMargin">60dp</dimen>
     <dimen name="CardTextMargin">12dp</dimen>

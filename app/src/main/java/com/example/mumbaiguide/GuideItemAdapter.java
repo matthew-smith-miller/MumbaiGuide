@@ -52,7 +52,7 @@ public class GuideItemAdapter extends ArrayAdapter<GuideItem> {
             listItemView.setTag(currentGuideItem.getId());
         }
 
-        //Set OnClickListener to open up popup
+        //Set OnClickListener to open up card
         listItemView.findViewById(R.id.list_guide_item).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
@@ -66,6 +66,7 @@ public class GuideItemAdapter extends ArrayAdapter<GuideItem> {
                 }
         );
 
+        //OnClickListener on the Star button to favorite an item
         listItemView.findViewById(R.id.list_guide_item_star).setOnClickListener(
                 new View.OnClickListener() {
                     @Override

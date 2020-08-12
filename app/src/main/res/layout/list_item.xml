@@ -13,7 +13,7 @@
         android:layout_height="@dimen/ListImage"
         android:layout_margin="12dp"
         android:scaleType="centerCrop"
-        tools:src="@drawable/haji_ali" />
+        tools:src="@drawable/sights_haji_ali" />
 
     <TextView
         android:id="@+id/list_guide_item_name"
@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/list_guide_item_image"
         android:layout_toRightOf="@id/list_guide_item_image"
+        android:layout_marginRight="@dimen/ListTextRightMargin"
         tools:text="Guide Item Name" />
 
     <TextView
@@ -30,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/list_guide_item_name"
         android:layout_toRightOf="@id/list_guide_item_image"
+        android:layout_marginRight="@dimen/ListTextRightMargin"
         tools:text="Subcategory" />
 
     <ImageView

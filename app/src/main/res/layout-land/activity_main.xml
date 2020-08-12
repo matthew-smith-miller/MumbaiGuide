@@ -15,7 +15,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="144dp">
+            android:layout_height="84dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -58,6 +58,7 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
+            style="@style/TabLayoutFill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabMode="fixed" />
@@ -94,16 +95,17 @@
 
             <ImageView
                 android:id="@+id/card_guide_item_image"
-                android:layout_width="match_parent"
-                android:layout_height="194dp"
-                android:layout_marginBottom="@dimen/CardSpacingMargin"
+                android:layout_width="194dp"
+                android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 tools:src="@drawable/sights_haji_ali" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/card_guide_item_image"
+                android:layout_alignTop="@id/card_guide_item_image"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/card_guide_item_image"
                 android:orientation="vertical">
 
                 <TextView
@@ -112,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/CardTextMargin"
-                    android:layout_marginRight="@dimen/CardTextMargin"
+                    android:layout_marginRight="@dimen/ListTextRightMargin"
                     android:layout_marginBottom="3dp"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     tools:text="@string/sights_haji_ali_name" />
@@ -122,7 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/CardTextMargin"
-                    android:layout_marginRight="@dimen/CardTextMargin"
+                    android:layout_marginRight="@dimen/ListTextRightMargin"
                     android:layout_marginBottom="@dimen/CardSpacingMargin"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"

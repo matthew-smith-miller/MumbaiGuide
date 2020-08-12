@@ -37,26 +37,20 @@ public class MainActivity extends FragmentActivity {
     private static ArrayList<GuideItem> shoppingFiltered;
     private static ArrayList<GuideItem> activitiesFiltered;
     private static boolean guideItemsBuilt = false;
+    private static final String GUIDE_ITEMS_BUILT_KEY = "guideItemsBuilt";
+    private static final String IS_CARD_DISPLAYED_KEY = "isCardDisplayed";
+    private static final String CARD_ID_KEY = "cardId";
+    private static final String CARD_VIEW_KEY = "cardView";
+    private static boolean isCardDisplayed = false;
+    private static int cardId;
+    private static View cardView;
     GuideItemFragmentAdapter guideItemFragmentAdapter;
     ViewPager2 viewPager;
 
-    public static ArrayList<GuideItem> getSights() {
-        return sightsFiltered;
-    }
-
-    public static ArrayList<GuideItem> getEatingDrinking() {
-        return eatingDrinkingFiltered;
-    }
-
-    public static ArrayList<GuideItem> getShopping() {
-        return shoppingFiltered;
-    }
-
-    public static ArrayList<GuideItem> getActivities() {
-        return activitiesFiltered;
-    }
-
     public static void displayCard(Activity activity, int id, final View clickedView) {
+        MainActivity.cardView = clickedView;
+        MainActivity.cardId = id;
+
         GuideItem currentGuideItem = GuideItem.getGuideItemById(id);
         if (currentGuideItem != null) {
             View card = activity.findViewById(R.id.card);
@@ -74,6 +68,9 @@ public class MainActivity extends FragmentActivity {
             if (currentGuideItem.isStarred()) {
                 ((ImageView) card.findViewById(R.id.card_guide_item_star)).setImageResource(
                         R.drawable.ic_round_star_24);
+            } else {
+                ((ImageView) card.findViewById(R.id.card_guide_item_star)).setImageResource(
+                        R.drawable.ic_round_star_24_fade);
             }
             card.findViewById(R.id.card_guide_item_star).setTag(currentGuideItem.getId());
             ((TextView) card.findViewById(R.id.card_guide_item_description)).setText(
@@ -121,7 +118,25 @@ public class MainActivity extends FragmentActivity {
                     .alpha(1f)
                     .setDuration(animationDuration)
                     .setListener(null);
+
+            isCardDisplayed = true;
         }
+    }
+
+    public static ArrayList<GuideItem> getSights() {
+        return sightsFiltered;
+    }
+
+    public static ArrayList<GuideItem> getEatingDrinking() {
+        return eatingDrinkingFiltered;
+    }
+
+    public static ArrayList<GuideItem> getShopping() {
+        return shoppingFiltered;
+    }
+
+    public static ArrayList<GuideItem> getActivities() {
+        return activitiesFiltered;
     }
 
     @Override
@@ -195,6 +210,36 @@ public class MainActivity extends FragmentActivity {
                 closeCard();
             }
         });
+
+        if (isCardDisplayed) {
+            displayCard(this, cardId, cardView);
+        }
+    }
+
+    private void closeCard() {
+        final View card = findViewById(R.id.card);
+        final View cardOverlay = findViewById(R.id.card_overlay);
+        card.animate()
+                .alpha(0f)
+                .setDuration(animationDuration)
+                .setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        card.setVisibility(View.GONE);
+                    }
+                });
+        cardOverlay.animate()
+                .alpha(0f)
+                .setDuration(animationDuration)
+                .setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        cardOverlay.setVisibility(View.GONE);
+                    }
+                });
+        isCardDisplayed = false;
     }
 
     private void buildGuideItems() {
@@ -388,31 +433,6 @@ public class MainActivity extends FragmentActivity {
         guideItemsBuilt = true;
     }
 
-    private void closeCard() {
-        final View card = findViewById(R.id.card);
-        final View cardOverlay = findViewById(R.id.card_overlay);
-        card.animate()
-                .alpha(0f)
-                .setDuration(animationDuration)
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        card.setVisibility(View.GONE);
-                    }
-                });
-        cardOverlay.animate()
-                .alpha(0f)
-                .setDuration(animationDuration)
-                .setListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        cardOverlay.setVisibility(View.GONE);
-                    }
-                });
-    }
-
     public void preventClicks(View view) {
     }
 
@@ -420,6 +440,9 @@ public class MainActivity extends FragmentActivity {
         if (filter.equals(getString(R.string.filter_default))) {
             clearFilter();
         } else {
+            TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+            int position = tabLayout.getSelectedTabPosition();
+
             sightsFiltered = new ArrayList<>();
             eatingDrinkingFiltered = new ArrayList<>();
             shoppingFiltered = new ArrayList<>();
@@ -473,10 +496,14 @@ public class MainActivity extends FragmentActivity {
             guideItemFragmentAdapter = new GuideItemFragmentAdapter(this);
             viewPager = findViewById(R.id.view_pager);
             viewPager.setAdapter(guideItemFragmentAdapter);
+            viewPager.setCurrentItem(position);
         }
     }
 
     private void clearFilter() {
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        int position = tabLayout.getSelectedTabPosition();
+
         sightsFiltered = sights;
         eatingDrinkingFiltered = eatingDrinking;
         shoppingFiltered = shopping;
@@ -485,5 +512,6 @@ public class MainActivity extends FragmentActivity {
         guideItemFragmentAdapter = new GuideItemFragmentAdapter(this);
         viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(guideItemFragmentAdapter);
+        viewPager.setCurrentItem(position);
     }
 }

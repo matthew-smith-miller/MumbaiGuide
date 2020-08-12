@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">MumbaiGuide</string>
     <string name="mumbai_guide">Mumbai Guide</string>
-    <string name="tab_label_sights">Sights</string>
-    <string name="tab_label_eating">Eating &amp; Drinking</string>
-    <string name="tab_label_shopping">Shopping</string>
-    <string name="tab_label_activities">Activities</string>
+    <string name="tab_label_sights">See</string>
+    <string name="tab_label_eating">Eat</string>
+    <string name="tab_label_shopping">Shop</string>
+    <string name="tab_label_activities">Do</string>
     <string name="south_mumbai">South Mumbai</string>
     <string name="upper_town">Upper Town</string>
     <string name="mid_city">Mid-City</string>
@@ -21,7 +21,6 @@
         <item>@string/other</item>
         <item>@string/starred</item>
     </string-array>
-    <string name="sample_desc">Beautiful mosque and dargah (shrine for a deceased saint) on a little island off the shore. People of all religions are welcome. One of my favorite spots in the city. Bring a handkerchief to cover your hair, or a scarf for women. Women can\'t go all the way into the shrine (annoying) but you can still get a good view. People will try and sell you flowers and trinkets to bring in as an offering; those are optional despite what they might say.</string>
     <string name="close">Close</string>
 
     <!--Data for GuideItems-->
@@ -92,7 +91,7 @@
     <string name="sights_maa_hajjani_description">Rarely visited, this smaller dargah on the point of land opposite Haji Ali is beautiful and tranquil. No shorts allowed.</string>
     <string name="sights_maa_hajjani_location">Motilal Sanghi Rd, Shiv Sagar Estate, Worli</string>
     <string name="sights_mt_mary_name">Basilica Of Our Lady of The Mount (St. Mary\'s Cathedral)</string>
-    "<string name="sights_mt_mary_description">The centerpiece of Mumbai\'s Catholic community. The walk up there is nice, and from the top you can see the ocean. It sits above the Bandra Bandstand, a lovely seafront promenade that is geat for a stroll in the afternoon or evening, when many people come out to sit. At the actual ""bandstand"" I have often encountered the same group of youth boisterously playing guitars and singing. At the end of the promenade is the Taj Lands End hotel and beyond it an old Portuguese Fort.</string>"
+    "<string name="sights_mt_mary_description">The centerpiece of Mumbai\'s Catholic community. The walk up there is nice, and from the top you can see the ocean. It sits above the Bandra Bandstand, a lovely seafront promenade that is geat for a stroll in the afternoon or evening, when many people come out to sit. At the end of the promenade is the Taj Lands End hotel and beyond it an old Portuguese Fort.</string>"
     <string name="sights_mt_mary_location">Mt. Mary Rd., Bandra (Above Bandstand)</string>
 
     <!--SHOPPING-->
