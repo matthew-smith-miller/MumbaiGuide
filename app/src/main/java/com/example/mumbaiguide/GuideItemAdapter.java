@@ -46,6 +46,9 @@ public class GuideItemAdapter extends ArrayAdapter<GuideItem> {
             if (currentGuideItem.isStarred()) {
                 ((ImageView) convertView.findViewById(R.id.list_guide_item_star)).setImageResource(
                         R.drawable.ic_round_star_24);
+            } else {
+                ((ImageView) convertView.findViewById(R.id.list_guide_item_star)).setImageResource(
+                        R.drawable.ic_round_star_24_fade);
             }
             convertView.findViewById(R.id.list_guide_item_star).setTag(currentGuideItem.getId());
             convertView.setTag(currentGuideItem.getId());
