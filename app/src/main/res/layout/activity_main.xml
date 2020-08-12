@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="144dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/krishna_baug" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                style="@style/HeaderTextWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/mumbai_guide"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <View
+                android:layout_width="@dimen/SpinnerWidth"
+                android:layout_height="@dimen/SpinnerHeight"
+                android:layout_alignLeft="@id/spinner"
+                android:layout_alignTop="@id/spinner"
+                android:background="@color/colorPrimaryLight" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="SpinnerWhite"
+                android:layout_width="@dimen/SpinnerWidth"
+                android:layout_height="@dimen/SpinnerHeight"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="12dp" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/card_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccentOverlay"
+        android:onClick="preventClicks"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/CardHorizontalMargin"
+        android:layout_marginTop="@dimen/CardVerticalMargin"
+        android:layout_marginRight="@dimen/CardHorizontalMargin"
+        android:layout_marginBottom="@dimen/CardVerticalMargin"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/card_guide_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:layout_marginBottom="@dimen/CardSpacingMargin"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/sights_haji_ali" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_guide_item_image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/card_guide_item_name"
+                    style="@style/HeaderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/CardTextMargin"
+                    android:layout_marginRight="@dimen/CardTextMargin"
+                    android:layout_marginBottom="3dp"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    tools:text="@string/sights_haji_ali_name" />
+
+                <TextView
+                    android:id="@+id/card_guide_item_subcat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/CardTextMargin"
+                    android:layout_marginRight="@dimen/CardTextMargin"
+                    android:layout_marginBottom="@dimen/CardSpacingMargin"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    tools:text="@string/subcat_religious" />
+
+                <TextView
+                    android:id="@+id/card_guide_item_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/CardTextMargin"
+                    android:layout_marginRight="@dimen/CardTextMargin"
+                    android:layout_marginBottom="@dimen/CardSpacingMargin"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?android:attr/textColorSecondary"
+                    tools:text="@string/sights_haji_ali_description" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/CardTextMargin"
+                    android:layout_marginTop="@dimen/CardSpacingMargin"
+                    android:layout_marginRight="@dimen/CardTextMargin"
+                    android:layout_marginBottom="@dimen/CardSpacingMargin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/CardIconSize"
+                        android:layout_height="@dimen/CardIconSize"
+                        android:src="@drawable/ic_baseline_location_on_24" />
+
+                    <TextView
+                        android:id="@+id/card_guide_item_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        tools:text="Such and Such Rd Opp. XYZ" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/card_guide_item_star"
+                android:layout_width="@dimen/ListStar"
+                android:layout_height="@dimen/ListStar"
+                android:layout_alignParentRight="true"
+                android:layout_margin="6dp"
+                android:src="@drawable/ic_round_star_24_fade" />
+
+            <TextView
+                android:id="@+id/card_guide_item_neighborhood"
+                style="@style/NeighborhoodText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/card_guide_item_image"
+                android:layout_alignBottom="@id/card_guide_item_image"
+                android:layout_margin="6dp"
+                tools:text="@string/mid_city" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/card_close_button"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/close" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

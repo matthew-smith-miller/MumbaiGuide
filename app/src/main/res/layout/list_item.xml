@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_guide_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/list_guide_item_image"
+        android:layout_width="@dimen/ListImage"
+        android:layout_height="@dimen/ListImage"
+        android:layout_margin="12dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/haji_ali" />
+
+    <TextView
+        android:id="@+id/list_guide_item_name"
+        style="@style/HeaderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/list_guide_item_image"
+        android:layout_toRightOf="@id/list_guide_item_image"
+        tools:text="Guide Item Name" />
+
+    <TextView
+        android:id="@+id/list_guide_item_subcat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_guide_item_name"
+        android:layout_toRightOf="@id/list_guide_item_image"
+        tools:text="Subcategory" />
+
+    <ImageView
+        android:id="@+id/list_guide_item_star"
+        android:layout_width="@dimen/ListStar"
+        android:layout_height="@dimen/ListStar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="6dp"
+        android:focusable="false"
+        android:src="@drawable/ic_round_star_24_fade" />
+
+    <TextView
+        android:id="@+id/list_guide_item_neighborhood"
+        style="@style/NeighborhoodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/list_guide_item_image"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        tools:text="South Mumbai" />
+
+
+</RelativeLayout>

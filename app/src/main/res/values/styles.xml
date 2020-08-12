@@ -1,0 +1,42 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="HeaderText" parent="AppTheme">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="HeaderTextWhite" parent="HeaderText">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="SubheaderText" parent="AppTheme">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NeighborhoodText" parent="AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="SpinnerWhite" parent="AppTheme">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <dimen name="ListImage">72dp</dimen>
+    <dimen name="ListStar">36dp</dimen>
+    <dimen name="CardHorizontalMargin">36dp</dimen>
+    <dimen name="CardVerticalMargin">60dp</dimen>
+    <dimen name="CardTextMargin">12dp</dimen>
+    <dimen name="CardSpacingMargin">9dp</dimen>
+    <dimen name="CardIconSize">30dp</dimen>
+    <dimen name="SpinnerWidth">200dp</dimen>
+    <dimen name="SpinnerHeight">30dp</dimen>
+
+</resources>

@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">MumbaiGuide</string>
+    <string name="mumbai_guide">Mumbai Guide</string>
+    <string name="tab_label_sights">Sights</string>
+    <string name="tab_label_eating">Eating &amp; Drinking</string>
+    <string name="tab_label_shopping">Shopping</string>
+    <string name="tab_label_activities">Activities</string>
+    <string name="south_mumbai">South Mumbai</string>
+    <string name="upper_town">Upper Town</string>
+    <string name="mid_city">Mid-City</string>
+    <string name="bandra">Bandra</string>
+    <string name="other">Other</string>
+    <string name="starred">Starred</string>
+    <string name="filter_default">-- Filter --</string>
+    <string-array name="neighborhoods_array">
+        <item>@string/filter_default</item>
+        <item>@string/south_mumbai</item>
+        <item>@string/upper_town</item>
+        <item>@string/mid_city</item>
+        <item>@string/bandra</item>
+        <item>@string/other</item>
+        <item>@string/starred</item>
+    </string-array>
+    <string name="sample_desc">Beautiful mosque and dargah (shrine for a deceased saint) on a little island off the shore. People of all religions are welcome. One of my favorite spots in the city. Bring a handkerchief to cover your hair, or a scarf for women. Women can\'t go all the way into the shrine (annoying) but you can still get a good view. People will try and sell you flowers and trinkets to bring in as an offering; those are optional despite what they might say.</string>
+    <string name="close">Close</string>
+
+    <!--Data for GuideItems-->
+    <!--Subcategories-->
+    <string name="subcat_landmark">Landmark</string>
+    <string name="subcat_religious">Religious Site</string>
+    <string name="subcat_sports">Sports</string>
+    <string name="subcat_outing">Outing</string>
+    <string name="subcat_clothing">Clothing</string>
+    <string name="subcat_gifts">Gifts</string>
+    <string name="subcat_antiques">Antiques</string>
+    <string name="subcat_guj_raj">Gujarati / Rajasthani</string>
+    <string name="subcat_gujarati">Gujarati</string>
+    <string name="subcat_maharashtrian">Maharashtrian</string>
+    <string name="subcat_north_indian">North Indian</string>
+    <string name="subcat_parsi_irani">Parsi / Irani</string>
+    <string name="subcat_western">Western</string>
+    <string name="subcat_juice">Juice</string>
+    <string name="subcat_chaat">Chaat</string>
+    <string name="subcat_bar">Bar</string>
+
+    <!--EATING-->
+    <string name="eating_cafe_zoe_name">Cafe Zoe</string>
+    <string name="eating_cafe_zoe_description">Hip, quality restaurant in the redeveloped mills area. Their brunch is excellent. Also a fun night spot, with a crowd that is generally a bit older. A favorite among expats.</string>
+    <string name="eating_cafe_zoe_location">Mathurdas Mill Compound, NM Joshi Marg</string>
+    <string name="eating_haji_ali_juice_name">Haji Ali Juice Center</string>
+    <string name="eating_haji_ali_juice_description">Located right by the beginning of the causeway to the namesake dargah, the juice center serves up fresh juices, fruit creams, shakes, and a selection of mediocre savory food. Go for the juice, especially the Ganga-Jamuna combo (orange and mosambi).</string>
+    <string name="eating_haji_ali_juice_location">Haji Ali Rd, Mahalaxmi</string>
+    <string name="eating_mcb_name">Maharashtra Chana Bhandar</string>
+    <string name="eating_mcb_description">Just up the street from Punjab Sweet House. Significantly higher risk of getting sick than at PSH, but they make the best dahi puri (a chaat made with potatoes, fresh herbs, and yogurt) in the city.</string>
+    <string name="eating_mcb_location">Dr. Ambedkar Rd, Pali Naka</string>
+    <string name="eating_merwan_name">B. Merwan &amp; Co</string>
+    <string name="eating_merwan_description">Open early, this Irani (Zoroastrian Persian migrants from the 19th and 20th century) cafe established in 1914 is known for its simple breakfast food: chai, buttered buns, omelettes, and dense sweet mawa cake.</string>
+    <string name="eating_merwan_location">Alibhai Premji Rd, opp Grant Rd Station (East)</string>
+    <string name="eating_pali_bhavan_name">Pali Bhavan</string>
+    <string name="eating_pali_bhavan_description">One of the best restaurants in the city. Classic Indian dishes prepared extremely well. Great ambiance, with dim lighting and walls covered with antique photographs.</string>
+    <string name="eating_pali_bhavan_location">Dr. Ambedkar Rd, Pali Naka</string>
+    <string name="eating_shree_thaker_name">Shree Thaker Bhojnalay</string>
+    <string name="eating_shree_thaker_description">THE place for Gujarati thalis (a serving style where you get lots of little bowls of various curries). Gujarati food iTHE place for Gujarati thalis (a serving style where you get lots of little bowls of various curries). Gujarati food is known for being mild and often slightly sweet. Go when you\'re very hungry.</string>
+    <string name="eating_shree_thaker_location">Dadisheth Agyari Lane, Off Kalbadevi Road, Kalbadevi</string>
+    <string name="eating_soam_name">Soam</string>
+    <string name="eating_soam_description">A vegetarian place specializing in northwestern food (Rajasthani and Gujarati). I recommend gatte ki sabzi or dal bhatti churma. It gets very busy, so expect to wait.</string>
+    <string name="eating_soam_location">Babulnath Rd, Chowpatty</string>
+    <string name="eating_mondegar_name">Mondegar\'s</string>
+    <string name="eating_mondegar_description">One of a string of divey bars on Colaba Causeway, with beer and reasonable food. Green chili beef and a cold beer was my standard order, usually after a run. Leopold’s down the street is perhaps more famous because it was targeted in the 26/11 attacks, and the guy who wrote Shantaram spent time there, etc., but it’s overrated.</string>
+    <string name="eating_mondegar_location">Colaba Causeway</string>
+    <string name="eating_suzette_name">Suzette</string>
+    <string name="eating_suzette_description">If you get sick of Indian food or want an excellent coffee, drop by this beloved crepe place run by a French expat. Their specialty is the hearty, savory, dark buckwheat crepe. Their desserts are also excellent, especially the chocolate mousse.</string>
+    <string name="eating_suzette_location">St. John St, Pali Naka (opp Gold\'s Gym)</string>
+    <string name="eating_totos_name">Toto\'s</string>
+    <string name="eating_totos_description">A funky dive with an automotive theme, classic rock blaring, and cheap pitchers of beer. Noisy and crowded but lots of fun.</string>
+    <string name="eating_totos_location">30th Rd, Pali Naka</string>
+    <string name="eating_aaswad_name">Aaswad</string>
+    <string name="eating_aaswad_description">In hectic Dadar, a bit further north than most of the items here, this is the go-to place for Maharashtrian food, i.e. the cuisine local to the state in which Mumbai is located. Their misal pav (spicy lentils with a buttered bun to sop it up) won some international vegetarian food prize a couple years back.</string>
+    <string name="eating_aaswad_location">Opposite Amar Hind Mandal, Gokhale Road (North), Dadar</string>
+
+    <!--SIGHTS-->
+    <string name="sights_cst_name">Chhatrapati Shivaji Terminus</string>
+    <string name="sights_cst_description">The beautiful train station formerly (and by some, still) known as Victoria Terminus or VT. Like everything in Mumbai, it is named after the warrior king Shivaji. There is a section that is closed off but available to tour between 3 and 5pm on weekdays (so I\'ve been told, but never made it).</string>
+    <string name="sights_cst_location">Mahatma Gandhi Chowk, Opp. Wellington Fountain</string>
+    <string name="sights_gateway_name">Gateway of India</string>
+    <string name="sights_gateway_description">Built by the British to celebrate the visit of the king, surrounded by a pleasant plaza and adjacent to the Taj Mahal Palace hotel. Boats leave from near the Gateway to the islands and the southern coast.</string>
+    <string name="sights_gateway_location">Apollo Bandar, opp Taj Hotel</string>
+    <string name="sights_haji_ali_name">Haji Ali Dargah</string>
+    <string name="sights_haji_ali_description">Beautiful mosque and dargah (shrine for a deceased saint) on a little island off the shore. People of all religions are welcome. One of my favorite spots in the city. Bring a handkerchief to cover your hair, or a scarf for women. Women can\'t go all the way into the shrine (annoying) but you can still get a good view. People will try and sell you flowers and trinkets to bring in as an offering; those are optional despite what they might say. </string>
+    <string name="sights_haji_ali_location">Dargah Rd, Mahalaxmi Seaface</string>
+    <string name="sights_maa_hajjani_name">Maa Hajjani Dargah</string>
+    <string name="sights_maa_hajjani_description">Rarely visited, this smaller dargah on the point of land opposite Haji Ali is beautiful and tranquil. No shorts allowed.</string>
+    <string name="sights_maa_hajjani_location">Motilal Sanghi Rd, Shiv Sagar Estate, Worli</string>
+    <string name="sights_mt_mary_name">Basilica Of Our Lady of The Mount (St. Mary\'s Cathedral)</string>
+    "<string name="sights_mt_mary_description">The centerpiece of Mumbai\'s Catholic community. The walk up there is nice, and from the top you can see the ocean. It sits above the Bandra Bandstand, a lovely seafront promenade that is geat for a stroll in the afternoon or evening, when many people come out to sit. At the actual ""bandstand"" I have often encountered the same group of youth boisterously playing guitars and singing. At the end of the promenade is the Taj Lands End hotel and beyond it an old Portuguese Fort.</string>"
+    <string name="sights_mt_mary_location">Mt. Mary Rd., Bandra (Above Bandstand)</string>
+
+    <!--SHOPPING-->
+    <string name="shopping_anokhi_name">Anokhi</string>
+    <string name="shopping_anokhi_description">A clothing store that specializes in Rajasthani-style woodblock printing, including demonstrations at some stores. Their wares include shirts, saris, quilts, and more.</string>
+    <string name="shopping_anokhi_location">Waterfield Rd, Bandra West (other locations throughout city)</string>
+    <string name="shopping_chor_bazaar_name">Chor Bazaar Antique Market</string>
+    <string name="shopping_chor_bazaar_description">The so-called "Thieve\'s Market" is a huge market complex where you can get auto parts, wood, appliances, and, on Mutton Street, antiques and oddities. Be prepared to haggle, but you can get very cool stuff there. Some of the art stores have really interesting objects from around South Asia. Even if you buy nothing it\'s worth a visit – this is Mumbai at its gritty best.</string>
+    <string name="shopping_chor_bazaar_location">Mutton St, Kampathipura</string>
+    <string name="shopping_cowpathy_name">Cowpathy</string>
+    <string name="shopping_cowpathy_description">one of the weirder shops you\'ll come across. A hole in the wall where a guy sells nicely scented ayurvedic soaps made from cow poop (no joke). They are very exfoliating, er, because of all the plant fiber. At Rs 30 a piece they are one of my favorite things to bring back for brave friends.</string>
+    <string name="shopping_cowpathy_location">Charni Rd East</string>
+
+
+    <!--ACTIVITIES-->
+    <string name="activities_cricket_name">Cricket</string>
+    <string name="activities_cricket_description">Mumbai\'s Wankhede Stadium is host to the Mumbai Indians of the Indian Premier League during the summer months (April-May). The stadium also hosts occasional international matches.</string>
+    <string name="activities_cricket_location">Vinoo Mankad Rd, Churchgate</string>
+    <string name="activities_kabaddi_name">Kabaddi</string>
+    <string name="activities_kabaddi_description">Kabaddi is an ancient South Asian sport that has recently become the inspiration for a professional league. Mumbai\'s team plays at a stadium on the NSCI grounds in Mahalaxmi.</string>
+    <string name="activities_kabaddi_location">Sardar Vallabhbhai Patel Indoor Stadium</string>
+    <string name="activities_sailing_name">Sailing</string>
+    <string name="activities_sailing_description"> arrange in advance because they get booked up. These guys can take you on a sail in the harbor and have boats of various sizes. The afternoon slots are usually 4-6 and 6-8; the former is better because the sun sets by ~7:30. You might get splashed, but hey, that\'s why there are showers. Chetan: +91 77383 34124. Or his partner Nikhil: +91 98674 94680. They are very responsive on WhatsApp.</string>
+    <string name="activities_sailing_location">Gateway of India</string>
+    <string name="activities_sgnp_name">Sanjay Gandhi National Park</string>
+    <string name="activities_sgnp_description">The national park occupies a chunk of the northern portion of the island on which Mumbai sits. Despite being surrounded by city is it a peaceful setting, with hikes to ancient Buddhist caves and a large population of leopards that usually stay out of sight.</string>
+    <string name="activities_sgnp_location">Northern end of Mumbai</string>
+    <string name="activities_monsoon_trek_name">Monsoon Trekking</string>
+    <string name="activities_monsoon_trek_description">One of the most popular activities in Mumbai during the rainy season is to leave the city for a trek, often to one of the many ancient Maratha fortresses that top the surrounding mountains. Among the best are Raigad, Lohagad, and the stunning seaside Vijaydurg.</string>
+    <string name="activities_monsoon_trek_location">Various locations</string>
+
+
+</resources>
