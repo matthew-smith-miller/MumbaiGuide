@@ -25,9 +25,8 @@ public class GuideItemAdapter extends ArrayAdapter<GuideItem> {
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
 
@@ -36,24 +35,24 @@ public class GuideItemAdapter extends ArrayAdapter<GuideItem> {
 
         //Name, Subcat, Neighborhood, Image, isStarred
         if (currentGuideItem != null) {
-            ((TextView) listItemView.findViewById(R.id.list_guide_item_name)).setText(
+            ((TextView) convertView.findViewById(R.id.list_guide_item_name)).setText(
                     currentGuideItem.getName());
-            ((TextView) listItemView.findViewById(R.id.list_guide_item_subcat)).setText(
+            ((TextView) convertView.findViewById(R.id.list_guide_item_subcat)).setText(
                     currentGuideItem.getSubcategory());
-            ((TextView) listItemView.findViewById(R.id.list_guide_item_neighborhood)).setText(
+            ((TextView) convertView.findViewById(R.id.list_guide_item_neighborhood)).setText(
                     currentGuideItem.getNeighborhood());
-            ((ImageView) listItemView.findViewById(R.id.list_guide_item_image)).setImageResource(
+            ((ImageView) convertView.findViewById(R.id.list_guide_item_image)).setImageResource(
                     currentGuideItem.getImage());
             if (currentGuideItem.isStarred()) {
-                ((ImageView) listItemView.findViewById(R.id.list_guide_item_star)).setImageResource(
+                ((ImageView) convertView.findViewById(R.id.list_guide_item_star)).setImageResource(
                         R.drawable.ic_round_star_24);
             }
-            listItemView.findViewById(R.id.list_guide_item_star).setTag(currentGuideItem.getId());
-            listItemView.setTag(currentGuideItem.getId());
+            convertView.findViewById(R.id.list_guide_item_star).setTag(currentGuideItem.getId());
+            convertView.setTag(currentGuideItem.getId());
         }
 
         //Set OnClickListener to open up card
-        listItemView.findViewById(R.id.list_guide_item).setOnClickListener(
+        convertView.findViewById(R.id.list_guide_item).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -67,7 +66,7 @@ public class GuideItemAdapter extends ArrayAdapter<GuideItem> {
         );
 
         //OnClickListener on the Star button to favorite an item
-        listItemView.findViewById(R.id.list_guide_item_star).setOnClickListener(
+        convertView.findViewById(R.id.list_guide_item_star).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -86,6 +85,6 @@ public class GuideItemAdapter extends ArrayAdapter<GuideItem> {
                 }
         );
 
-        return listItemView;
+        return convertView;
     }
 }

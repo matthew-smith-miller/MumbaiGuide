@@ -37,10 +37,6 @@ public class MainActivity extends FragmentActivity {
     private static ArrayList<GuideItem> shoppingFiltered;
     private static ArrayList<GuideItem> activitiesFiltered;
     private static boolean guideItemsBuilt = false;
-    private static final String GUIDE_ITEMS_BUILT_KEY = "guideItemsBuilt";
-    private static final String IS_CARD_DISPLAYED_KEY = "isCardDisplayed";
-    private static final String CARD_ID_KEY = "cardId";
-    private static final String CARD_VIEW_KEY = "cardView";
     private static boolean isCardDisplayed = false;
     private static int cardId;
     private static View cardView;
